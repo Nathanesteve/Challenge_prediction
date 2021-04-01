@@ -20,6 +20,6 @@ Sources et instpirations :
 
 ## Partie prediction
 
-![Alt Text](Code_prediction_Montpellier_cycliste/Passage_cycliste_mtp.pdf)  
+![image](Code_prediction_Montpellier_cycliste/Passage_cycliste_mtp.pdf)  
 
 Le code de ma prédiction se trouve dans le dossier `Code_prediction_Montpellier_cycliste`

@@ -10,7 +10,7 @@ import os
 from selenium import webdriver
 
 # Variables et fonctions
-n = 1 # proportion cercle pour la visualisation
+n = 1  # proportion cercle pour la visualisation
 Times_beg = ['2020-08-01', '2020-08-09', '2020-08-16', '2020-08-23',
              '2020-09-01', '2020-09-09', '2020-09-16', '2020-09-23',
              '2020-10-01', '2020-10-09', '2020-10-16', '2020-10-23',
@@ -31,6 +31,7 @@ Balise = ['Vacances scolaire', 'Vacances scolaire', 'Vacances scolaire',
 
 Boucle = len(Times_beg)
 
+
 def form(str):
     ''' This function load json file and change the format
         to as data set with international day time '''
@@ -45,11 +46,13 @@ def form(str):
     df['dateObserved'] = time_improved
     return df
 
+
 def select_date(df, begin, end):
     ''' Select data in function of date in a data frame'''
     mask = ((df['dateObserved'] > begin) & (df['dateObserved'] < end))
     df = df.loc[mask]
     return df
+
 
 def data_construct(df):
     moy = df["intensity"].mean()
@@ -79,7 +82,9 @@ for j in range(Boucle):
     data_set = [cpt1, cpt2, cpt3, cpt4, cpt5, cpt6, cpt7, cpt8, cpt9]
     data_selected = []
 
-    # Selection des dates puis calcul de la moyenne sur les dates et pour chaque localisation
+    # Selection des dates puis calcul de la moyenne sur les dates 
+    # et pour chaque localisation
+
     for i in data_set:
         data_selected.append(select_date(i, Times_beg[j], Times_end[j]))
         # print(f'Datebegin:{Times_beg[j]}, TimeEndn:{Times_end[j]}')
@@ -90,7 +95,7 @@ for j in range(Boucle):
         # print(data_construct(i))
 
     collist = []
-    
+
     # Attribut une couleur en fonction du nombre de passage
     for i in moylist:
         if i > 900:
@@ -104,7 +109,7 @@ for j in range(Boucle):
     m = folium.Map(titles= 'mtp_bike', location=[43.59666660141285, 3.878532192712331], zoom_start=13)
 
     # Add marker
-    
+
     # Sans Nom
     folium.Marker(
         location=[43.60969924926758, 3.896939992904663],
@@ -249,7 +254,6 @@ for j in range(Boucle):
                 <p style="color:#008000";>Vert : plus de 900 passages moyen </p>
                 '''.format(loc3)
     m.get_root().html.add_child(folium.Element(title_html))
-    #Show map
 
     m.save(f'./Code_visualisation_Montpellier_cycliste/map{j}.html')
-    #webbrowser.open(f'map{j}.html') # Affiche en Pop up la map
+    #  webbrowser.open(f'map{j}.html') # Affiche en Pop up la map

@@ -11,7 +11,7 @@ Code dans le dossier Code_visualisation_Montpellier_cycliste (pour un gif de Aou
 + 2 - Conversions des fichiers HTML en png
 + 3 - Creation du gif
 
-Source et instpiration :  
+Sources et instpirations :  
 + https://data.montpellier3m.fr/dataset/comptages-velo-et-pieton-issus-des-eco-compteurs  
 + https://towardsdatascience.com/how-to-make-an-animated-gif-map-in-python-using-folium-and-imageio-91d3fc60d084  
 + https://medium.com/@rajat.mca.du.2015/creating-gifs-of-choropleth-maps-75ee47d60710  

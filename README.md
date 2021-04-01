@@ -7,7 +7,7 @@
 
 Code disponible dans le dossier `Code_visualisation_Montpellier_cycliste` (pour un gif de Aout à decembre 2020, pour ces dates pas besoin de code pour nettoyer les données)
 
-+ 1 - Télechargement des données et nettoyage puis création de map en HTML grace au package folium
++ 1 - Télechargement des données et nettoyage puis création de map en HTML grâce au package folium
 + 2 - Conversions des fichiers HTML en png
 + 3 - Creation du gif
 
